@@ -4,16 +4,16 @@ import { Hero } from "./Hero";
 describe("Hero", () => {
   it("renders the main heading", () => {
     render(<Hero />);
-    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/Ready to Build Something/i);
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/Ayati/i);
   });
 
-  it("renders the subheading", () => {
+  it("renders the tagline", () => {
     render(<Hero />);
-    expect(screen.getByText(/Get started with this template today/i)).toBeInTheDocument();
+    expect(screen.getByText(/The screen companion that actually reflects/i)).toBeInTheDocument();
   });
 
-  it("has main content landmark", () => {
+  it("renders the download button", () => {
     render(<Hero />);
-    expect(screen.getByRole("main")).toBeInTheDocument();
+    expect(screen.getByText(/Download for Desktop/i)).toBeInTheDocument();
   });
 });

@@ -18,9 +18,10 @@ const nextConfig = {
             value: [
               "default-src 'self'",
               "script-src 'self'",
-              "style-src 'self' 'unsafe-inline'",
-              "img-src 'self' data: blob:",
-              "font-src 'self'",
+              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+              "img-src 'self' data: blob: https:",
+              "font-src 'self' https://fonts.gstatic.com",
+              "connect-src 'self' https://api.qurancdn.com https://api.quranfoundation.org",
               "object-src 'none'",
               "base-uri 'none'",
               "frame-ancestors 'none'",

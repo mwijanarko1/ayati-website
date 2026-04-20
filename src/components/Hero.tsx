@@ -1,37 +1,86 @@
+import Image from "next/image";
+
 /**
- * Hero component for the landing page
- * This component displays a visually appealing hero section that motivates users to start building
+ * Calm & Cute Hero component for Ayati
  */
 export function Hero() {
   return (
-    <div className="relative bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 text-white overflow-hidden w-full h-full min-h-screen flex items-center justify-center">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-24 -left-24 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-        <div className="absolute top-1/3 -right-24 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-1/4 left-1/2 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center pt-32 pb-24 overflow-hidden bg-cream">
+      {/* Gentle Floating Blobs */}
+      <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-mint/30 rounded-full blur-[100px] animate-blob pointer-events-none" />
+      <div className="absolute bottom-10 right-1/4 w-[500px] h-[500px] bg-emerald/10 rounded-full blur-[120px] animate-blob animation-delay-2000 pointer-events-none" />
       
-      {/* Code pattern overlay */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{ 
-          backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'white\' fill-opacity=\'1\' fill-rule=\'evenodd\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/svg%3E")',
-          backgroundSize: '60px 60px'
-        }} />
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="flex flex-col items-start text-left max-w-xl">
+            {/* Friendly Greeting */}
+            <div className="mb-6 animate-fade-in">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald/10 border border-emerald/20 text-[#2D5A43] text-sm font-bold">
+                <span className="badge-pill !py-0.5 !px-2 !text-[9px] !bg-emerald-500 !text-white">HACKATHON</span>
+                <span>An Official Quran Foundation Submission</span>
+              </div>
+            </div>
+
+            {/* Main Headline */}
+            <h1 className="text-6xl md:text-7xl font-sora font-extrabold tracking-tight text-[#2D5A43] mb-6 leading-[1.05] text-balance">
+              Meet <span className="text-emerald-500">Ayati.</span> <br />
+              Your Quran Desktop Companion.
+            </h1>
+
+            {/* Tagline */}
+            <h2 className="text-xl md:text-2xl font-sora font-medium text-gray-500 mb-8 max-w-md leading-relaxed">
+              Ayati softly looks at your screen and shares a beautiful Quranic verse, translation, and reflection—exactly when you need it most.
+            </h2>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4 items-center w-full sm:w-auto">
+              <a
+                href="#download"
+                className="px-10 py-5 bg-emerald-500 hover:bg-emerald-400 text-white font-black rounded-cute transition-all duration-500 shadow-xl shadow-emerald-500/20 transform hover:-translate-y-2 w-full sm:w-auto text-center text-lg"
+              >
+                Start Your Journey
+              </a>
+              <a
+                href="https://github.com/mwijanarko1/ayati-quran-desktop-companion"
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="px-10 py-5 bg-white border-2 border-mint text-[#2D5A43] font-bold rounded-cute transition-all duration-500 transform hover:-translate-y-2 w-full sm:w-auto text-center text-lg"
+              >
+                Join Our Nest
+              </a>
+            </div>
+          </div>
+
+          {/* Cute Mascot Showcase */}
+          <div className="relative group perspective-1000">
+            <div className="absolute inset-0 bg-mint rounded-full blur-3xl opacity-30 animate-pulse" />
+            <div className="relative animate-float p-4">
+              <Image 
+                src="/icon.png" 
+                alt="Ayati Mascot - A friendly little creature reading the Quran" 
+                width={700} 
+                height={700} 
+                className="drop-shadow-2xl"
+                priority
+              />
+            </div>
+            
+            {/* Friendly Floating Tips */}
+            <div className="absolute -top-6 -right-6 glass-panel p-6 shadow-xl hidden md:block">
+              <div className="text-emerald-600 text-[10px] font-black uppercase tracking-widest mb-1">Gentle Note</div>
+              <div className="text-gray-600 font-sora font-bold text-sm">"Verily, with hardship comes ease."</div>
+            </div>
+            
+            <div className="absolute -bottom-4 -left-6 glass-panel p-4 shadow-xl hidden md:block">
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 bg-emerald-400 rounded-full" />
+                <span className="text-gray-500 text-xs font-bold font-mono">Your heart is safe here.</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      
-      {/* Content */}
-      <main id="main-content" className="flex flex-col items-center text-center px-6 sm:px-10 z-10">
-        {/* Main heading with gradient text */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-          Ready to Build Something <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-pink-400">Amazing?</span>
-        </h1>
-        
-        {/* Subheading */}
-        <p className="text-xl sm:text-2xl mb-8 text-blue-100 max-w-2xl">
-          Get started with this template today and turn your ideas into reality faster than ever.
-        </p>
-      </main>
-    </div>
+    </section>
   );
-} 
+}
+ 
