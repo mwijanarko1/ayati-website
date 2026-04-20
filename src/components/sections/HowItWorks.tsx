@@ -1,25 +1,31 @@
 import React from 'react';
+import { 
+  Leaf, 
+  SelectionBackground, 
+  Sparkle, 
+  FlowerLotus 
+} from "@phosphor-icons/react/dist/ssr";
 
 const steps = [
   {
     title: "Soft Capture",
     description: "Press a gentle hotkey to catch the current theme of your screen. Ayati softly reads the content like a breeze passing through leaves.",
-    icon: "🍃"
+    icon: <SelectionBackground size={32} weight="duotone" className="text-emerald-500" />
   },
   {
     title: "Sweet Synthesis",
     description: "Ayati finds the perfect Quranic verse to match your moment, creating a sweet bridge between your work and your heart.",
-    icon: "🍯"
+    icon: <Leaf size={32} weight="duotone" className="text-emerald-500" />
   },
   {
     title: "Quiet Reflection",
     description: "A beautiful verse card appears softly, offering a moment of peace and a helpful reflection for your journey.",
-    icon: "✨"
+    icon: <Sparkle size={32} weight="duotone" className="text-emerald-500" />
   },
   {
     title: "Gentle Growth",
     description: "Watch your spiritual garden grow with streak tracking and soft goals that keep you connected every day.",
-    icon: "🌸"
+    icon: <FlowerLotus size={32} weight="duotone" className="text-emerald-500" />
   }
 ];
 
@@ -44,7 +50,7 @@ export function HowItWorks() {
             {steps.map((step, index) => (
               <div key={index} className="card-cute p-10 group hover:border-emerald-500/40 transition-all duration-500 bg-cream/50">
                 <div className="flex gap-8 items-start">
-                  <div className="flex-shrink-0 w-16 h-16 rounded-cute bg-emerald-500/10 flex items-center justify-center text-3xl">
+                  <div className="flex-shrink-0 w-16 h-16 rounded-cute bg-emerald-500/10 flex items-center justify-center">
                     {step.icon}
                   </div>
                   <div className="flex-grow">

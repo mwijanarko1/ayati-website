@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Cloud, House } from "@phosphor-icons/react/dist/ssr";
 
 export function PrivacyReliability() {
   return (
@@ -19,8 +20,8 @@ export function PrivacyReliability() {
             
             <div className="space-y-6">
               <div className="card-cute p-6 flex items-start gap-6 border-emerald-500/10 hover:border-emerald-500 transition-all group">
-                <div className="w-12 h-12 flex-shrink-0 bg-mint rounded-cute flex items-center justify-center text-2xl">
-                  ☁️
+                <div className="w-12 h-12 flex-shrink-0 bg-mint rounded-cute flex items-center justify-center">
+                  <Cloud size={24} weight="duotone" className="text-emerald-600" />
                 </div>
                 <div>
                   <h3 className="text-xl font-sora font-bold text-[#2D5A43] mb-2">Passing Clouds</h3>
@@ -29,8 +30,8 @@ export function PrivacyReliability() {
               </div>
               
               <div className="card-cute p-6 flex items-start gap-6 border-emerald-500/10 hover:border-emerald-500 transition-all group">
-                <div className="w-12 h-12 flex-shrink-0 bg-mint rounded-cute flex items-center justify-center text-2xl">
-                  🏠
+                <div className="w-12 h-12 flex-shrink-0 bg-mint rounded-cute flex items-center justify-center">
+                  <House size={24} weight="duotone" className="text-emerald-600" />
                 </div>
                 <div>
                   <h3 className="text-xl font-sora font-bold text-[#2D5A43] mb-2">Local Comfort</h3>

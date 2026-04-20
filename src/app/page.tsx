@@ -35,7 +35,7 @@ export default function Home() {
                 <Link href="/terms" className="text-[#2D5A43] hover:text-emerald-500 transition-colors text-sm font-bold">Terms</Link>
               </div>
               <p className="text-gray-400 text-[10px] font-mono uppercase tracking-widest">
-                © {new Date().getFullYear()} Ayati. With Love.
+                © {new Date().getFullYear()} Ayati
               </p>
             </div>
           </div>

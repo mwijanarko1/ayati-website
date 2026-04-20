@@ -1,4 +1,5 @@
 import React from 'react';
+import { Heart } from "@phosphor-icons/react/dist/ssr";
 
 export function FinalCTA() {
   return (
@@ -37,11 +38,7 @@ export function FinalCTA() {
         </div>
 
         <div className="mt-32 pt-16 border-t border-emerald/10">
-          <div className="flex flex-col items-center gap-6">
-            <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-gray-400">
-              Made with 🤍 by Quran Foundation Partners
-            </p>
-          </div>
+          {/* Section for footer links or spacer if needed in future */}
         </div>
       </div>
     </section>

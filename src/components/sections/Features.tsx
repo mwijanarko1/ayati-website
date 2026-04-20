@@ -1,41 +1,49 @@
 import React from 'react';
+import { 
+  Bird, 
+  Sparkle, 
+  BookOpen, 
+  BookmarkSimple, 
+  Plant, 
+  Compass 
+} from "@phosphor-icons/react/dist/ssr";
 
 const features = [
   {
     title: "Gentle Companion",
     description: "An always-on-top window that stays with you, providing quiet guidance at a glance without ever getting in your way.",
     className: "bento-item-medium",
-    icon: "🕊️"
+    icon: <Bird size={32} weight="duotone" className="text-emerald-500" />
   },
   {
     title: "Kind Hearts AI",
-    description: "Ayati softly understands what's on your screen and finds the perfect verse to brighten your moment.",
+    description: "Ayati intelligently understands your digital workflow, finding the perfect verse to bring peaceful reflections to your screen.",
     className: "bento-item-large",
-    icon: "✨"
+    icon: <Sparkle size={48} weight="duotone" className="text-emerald-500" />
   },
   {
     title: "Deep Wisdom",
     description: "Expand any verse to explore beautiful tafsir insights or listen to peaceful recitations from your favorite qaris.",
     className: "",
-    icon: "📖"
+    icon: <BookOpen size={32} weight="duotone" className="text-emerald-500" />
   },
   {
     title: "Personal Library",
     description: "Keep a warm collection of verses that touch your heart. Save reflections and look back at your spiritual history.",
     className: "",
-    icon: "🔖"
+    icon: <BookmarkSimple size={32} weight="duotone" className="text-emerald-500" />
   },
   {
     title: "Daily Sparkle",
     description: "Build a lifelong habit with gentle streak tracking and soft goals that keep you connected to the Quran every day.",
     className: "bento-item-medium",
-    icon: "🌱"
+    icon: <Plant size={32} weight="duotone" className="text-emerald-500" />
   },
   {
     title: "Choose Your Path",
     description: "Select your preferred translations, reciters, and AI models for an experience that feels like home.",
     className: "bento-item-medium",
-    icon: "🧭"
+    icon: <Compass size={32} weight="duotone" className="text-emerald-500" />
   }
 ];
 
@@ -61,7 +69,7 @@ export function Features() {
               key={index} 
               className={`card-cute group flex flex-col p-8 ${feature.className}`}
             >
-              <div className="text-4xl mb-auto group-hover:scale-125 transition-transform duration-500 bg-mint/30 w-16 h-16 flex items-center justify-center rounded-cute">
+              <div className="mb-auto group-hover:scale-125 transition-transform duration-500 bg-mint/30 w-16 h-16 flex items-center justify-center rounded-cute">
                 {feature.icon}
               </div>
               <div>
@@ -79,5 +87,6 @@ export function Features() {
     </section>
   );
 }
+
 
 
