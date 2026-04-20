@@ -41,10 +41,12 @@ export function Hero() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 items-center w-full sm:w-auto">
               <a
-                href="#download"
+                href="https://github.com/mwijanarko1/ayati-quran-desktop-companion/releases/tag/ayati-mac"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-10 py-5 bg-emerald-500 hover:bg-emerald-400 text-white font-black rounded-cute transition-all duration-500 shadow-xl shadow-emerald-500/20 transform hover:-translate-y-2 w-full sm:w-auto text-center text-lg"
               >
-                Start Your Journey
+                Download
               </a>
               <a
                 href="https://github.com/mwijanarko1/ayati-quran-desktop-companion"
