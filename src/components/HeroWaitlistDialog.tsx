@@ -12,7 +12,7 @@ import {
 import { cn } from "@/lib/utils";
 
 const defaultTriggerClass =
-  "rounded-cute border-2 border-mint bg-white px-7 py-4 text-center text-base font-bold text-[#2D5A43] transition-all duration-500 hover:-translate-y-0.5 active:translate-y-0 sm:px-10 sm:py-5 sm:text-lg lg:transform lg:hover:-translate-y-2";
+  "w-full rounded-cute bg-emerald-500 px-7 py-4 text-center text-base font-black text-white shadow-xl shadow-emerald-500/20 transition-all duration-500 hover:bg-emerald-400 hover:-translate-y-0.5 active:translate-y-0 sm:w-auto sm:px-10 sm:py-5 sm:text-lg lg:transform lg:hover:-translate-y-2";
 
 export type HeroWaitlistDialogProps = {
   triggerClassName?: string;
@@ -33,7 +33,7 @@ export function HeroWaitlistDialog({ triggerClassName }: HeroWaitlistDialogProps
             Early access and launch updates, straight to your inbox.
           </DialogDescription>
         </DialogHeader>
-        <div className="mt-4">
+        <div className="mt-3">
           <WaitlistForm />
         </div>
       </DialogContent>

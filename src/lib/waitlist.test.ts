@@ -7,19 +7,6 @@ describe("parseWaitlistSubmission", () => {
     expect(result.success).toBe(true);
     if (result.success) {
       expect(result.data.email).toBe("person@example.com");
-      expect(result.data.newsletterOptIn).toBe(false);
-    }
-  });
-
-  it("preserves newsletter opt-in when true", () => {
-    const result = parseWaitlistSubmission({
-      email: "a@b.co",
-      newsletterOptIn: true,
-    });
-
-    expect(result.success).toBe(true);
-    if (result.success) {
-      expect(result.data.newsletterOptIn).toBe(true);
     }
   });
 

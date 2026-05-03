@@ -77,7 +77,7 @@ export default function PrivacyPage() {
               <strong>Desktop app.</strong> Data leaves your device mainly when <em>you</em> use features that contact third parties—for example an AI provider you configure with your own API key, optional Quran Foundation authorization and APIs, Quran.com content APIs, verse media hosts, prayer-time services when you set a location, or automatic update checks that contact GitHub release infrastructure. Those organizations handle data under their own terms and privacy policies.
             </p>
             <p>
-              <strong>This website.</strong> If you join our waitlist, we collect the email address you submit and your optional newsletter choice so we can send product updates and early-access information through our email provider, Resend. We also store submission metadata needed to operate the list, such as the source of the signup and submission time. We may store your cookie-banner preference in your browser (for example in local storage) so we do not prompt on every visit.
+              <strong>This website.</strong> If you join our waitlist, we collect the email address you submit so we can send product updates and early-access information through our email provider, Resend. We also store submission metadata needed to operate the list, such as the source of the signup and submission time.
             </p>
 
             <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">4. How We Use and Share Data</h2>
@@ -90,7 +90,7 @@ export default function PrivacyPage() {
 
             <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">5. Legal Bases, Retention, and Transfers</h2>
             <p>
-              Where GDPR or UK GDPR applies, we rely on consent for optional newsletter emails, legitimate interests for operating a requested waitlist and protecting the service, and legal obligation where we must keep records or respond to lawful requests. We keep waitlist data until you ask us to remove it, the list is no longer needed, or retention is required for legal or security reasons. Browser storage for the cookie banner remains until you clear site data or the stored preference is replaced.
+              Where GDPR or UK GDPR applies, we rely on legitimate interests for operating a requested waitlist and protecting the service, and legal obligation where we must keep records or respond to lawful requests. We keep waitlist data until you ask us to remove it, the list is no longer needed, or retention is required for legal or security reasons.
             </p>
             <p>
               Resend and other third-party providers may process data in countries outside your own. Where required, those transfers should be covered by appropriate safeguards provided by the relevant provider.

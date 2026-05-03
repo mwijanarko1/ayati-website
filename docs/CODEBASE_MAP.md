@@ -30,7 +30,6 @@ The product surface includes a static marketing site, waitlist signup with Resen
 - `HeroWaitlistDialog.tsx` - waitlist dialog triggered from hero
 - `VersePreview.tsx` - Quran verse preview component
 - `LegalMarkdown.tsx` - markdown renderer for legal pages
-- `CookieConsent.tsx` - cookie consent banner
 - `sections/` - landing page sections: `Features.tsx`, `HowItWorks.tsx`, `Integrations.tsx`, `FinalCTA.tsx`, `PrivacyReliability.tsx`
 - `waitlist/WaitlistForm.tsx` - waitlist form with email validation and submission
 - `ui/dialog.tsx` - reusable dialog component

@@ -21,7 +21,7 @@ const DialogOverlay = React.forwardRef<
   <DialogPrimitive.Overlay
     ref={ref}
     className={cn(
-      "fixed inset-0 z-50 bg-[#2D5A43]/35 backdrop-blur-[2px] data-[state=open]:animate-fade-in",
+      "fixed inset-0 z-[110] bg-[#2D5A43]/35 backdrop-blur-[2px] data-[state=open]:animate-fade-in",
       className,
     )}
     {...props}
@@ -38,19 +38,26 @@ const DialogContent = React.forwardRef<
     <DialogPrimitive.Content
       ref={ref}
       className={cn(
-        "fixed left-1/2 top-1/2 z-[51] grid max-h-[min(90dvh,90vh)] w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 -translate-y-1/2 gap-0 overflow-y-auto rounded-cute border-2 border-mint bg-cream p-6 shadow-2xl shadow-emerald-900/15 outline-none data-[state=open]:animate-hero-waitlist-pop",
+        "group fixed left-1/2 top-1/2 z-[111] w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 -translate-y-1/2 outline-none",
         className,
       )}
       {...props}
     >
-      {children}
-      <DialogPrimitive.Close
-        type="button"
-        className="absolute right-4 top-4 rounded-full p-2 text-[#2D5A43] transition-colors hover:bg-mint/50 focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:pointer-events-none"
-        aria-label="Close"
+      <div
+        className={cn(
+          "relative grid max-h-[min(90dvh,90vh)] gap-0 overflow-y-auto rounded-cute border-2 border-mint bg-cream p-6 shadow-2xl shadow-emerald-900/15",
+          "origin-center group-data-[state=open]:animate-hero-waitlist-pop",
+        )}
       >
-        <X size={22} weight="bold" aria-hidden />
-      </DialogPrimitive.Close>
+        {children}
+        <DialogPrimitive.Close
+          type="button"
+          className="absolute right-4 top-4 rounded-full p-2 text-[#2D5A43] transition-colors hover:bg-mint/50 focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:pointer-events-none"
+          aria-label="Close"
+        >
+          <X size={22} weight="bold" aria-hidden />
+        </DialogPrimitive.Close>
+      </div>
     </DialogPrimitive.Content>
   </DialogPortal>
 ));

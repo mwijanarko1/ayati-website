@@ -9,7 +9,7 @@ Last Updated: May 3, 2026
 
 ## Summary
 
-The Ayati desktop companion stores settings, reflections, and credentials locally and does not require an Ayati-operated account to run. Data typically leaves your device only when you enable features that call third parties (AI providers you configure with your keys, optional Quran Foundation APIs, Quran.com, verse media hosts, prayer-time APIs, or GitHub-hosted update checks). This marketing site may collect waitlist email through Resend, store submission metadata needed to operate the waitlist, and store cookie-banner preferences in browser storage.
+The Ayati desktop companion stores settings, reflections, and credentials locally and does not require an Ayati-operated account to run. Data typically leaves your device only when you enable features that call third parties (AI providers you configure with your keys, optional Quran Foundation APIs, Quran.com, verse media hosts, prayer-time APIs, or GitHub-hosted update checks). This marketing site may collect waitlist email through Resend and store submission metadata needed to operate the waitlist.
 
 ## Controller / contact
 
@@ -23,11 +23,10 @@ Ayati is published by Mikhail Wijanarko. Privacy requests: mikhailspeaks@gmail.c
 
 ## Website
 
-- Waitlist: email address and optional newsletter preference submitted by you
+- Waitlist: email address you submit
 - Provider: Resend for email list/contact management
-- Browser storage may remember cookie/consent choices
-- Legal bases where GDPR / UK GDPR applies: consent for optional newsletter emails, legitimate interests for requested waitlist operation and service protection, and legal obligation where required
-- Retention: waitlist data until removal is requested, the list is no longer needed, or legal/security retention requires otherwise; browser storage remains until cleared or replaced
+- Legal bases where GDPR / UK GDPR applies: legitimate interests for requested waitlist operation and service protection, and legal obligation where required
+- Retention: waitlist data until removal is requested, the list is no longer needed, or legal/security retention requires otherwise
 
 ## What we do not do
 

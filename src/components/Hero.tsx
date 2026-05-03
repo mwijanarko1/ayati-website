@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { HeroWaitlistDialog } from "@/components/HeroWaitlistDialog";
 
+/** Toggle when the macOS release link should appear in the hero again. */
+const SHOW_HERO_DOWNLOAD = false;
+
 /**
  * Calm & Cute Hero component for Ayati
  */
@@ -28,32 +31,36 @@ export function Hero() {
               focus, salah, and the Quran stay close to your day.
             </p>
 
-            <div className="animate-fade-in-up delay-300 flex w-full max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row sm:items-center sm:justify-center sm:gap-4 lg:justify-start">
-              <a
-                href="https://github.com/mwijanarko1/ayati-quran-desktop-companion/releases/tag/ayati-mac"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-cute bg-emerald-500 px-7 py-4 text-center text-base font-black text-white shadow-xl shadow-emerald-500/20 transition-all duration-500 hover:bg-emerald-400 hover:-translate-y-0.5 active:translate-y-0 sm:px-10 sm:py-5 sm:text-lg lg:transform lg:hover:-translate-y-2"
-              >
-                Download
-              </a>
-              <HeroWaitlistDialog />
-            </div>
+            <div className="mx-auto w-full max-w-sm sm:mx-0 sm:max-w-none lg:mx-0">
+              <div className="animate-fade-in-up delay-300 flex w-full flex-col gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4 lg:justify-start">
+                {SHOW_HERO_DOWNLOAD ? (
+                  <a
+                    href="https://github.com/mwijanarko1/ayati-quran-desktop-companion/releases/tag/ayati-mac"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-cute bg-emerald-500 px-7 py-4 text-center text-base font-black text-white shadow-xl shadow-emerald-500/20 transition-all duration-500 hover:bg-emerald-400 hover:-translate-y-0.5 active:translate-y-0 sm:px-10 sm:py-5 sm:text-lg lg:transform lg:hover:-translate-y-2"
+                  >
+                    Download
+                  </a>
+                ) : null}
+                <HeroWaitlistDialog />
+              </div>
 
-            <nav
-              className="animate-fade-in-up delay-400 mt-4 flex flex-wrap items-center justify-center gap-x-1 gap-y-1 text-sm text-gray-500 lg:justify-start"
-              aria-label="Legal"
-            >
-              <Link href="/privacy" className="text-emerald-600 underline-offset-2 hover:text-emerald-500 hover:underline">
-                Privacy Policy
-              </Link>
-              <span className="mx-2 text-gray-300" aria-hidden>
-                ·
-              </span>
-              <Link href="/terms" className="text-emerald-600 underline-offset-2 hover:text-emerald-500 hover:underline">
-                Terms of Service
-              </Link>
-            </nav>
+              <nav
+                className="animate-fade-in-up delay-400 mt-4 flex w-full flex-wrap items-center justify-center gap-x-1 gap-y-1 text-sm text-gray-500 lg:justify-start"
+                aria-label="Legal"
+              >
+                <Link href="/privacy" className="text-emerald-600 underline-offset-2 hover:text-emerald-500 hover:underline">
+                  Privacy Policy
+                </Link>
+                <span className="mx-2 text-gray-300" aria-hidden>
+                  ·
+                </span>
+                <Link href="/terms" className="text-emerald-600 underline-offset-2 hover:text-emerald-500 hover:underline">
+                  Terms of Service
+                </Link>
+              </nav>
+            </div>
           </div>
 
           <div className="relative mx-auto w-full max-w-[min(17.5rem,78vw)] perspective-1000 sm:max-w-xs md:max-w-sm lg:mx-0 lg:max-w-none">

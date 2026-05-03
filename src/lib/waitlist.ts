@@ -6,7 +6,6 @@ const waitlistSubmissionSchema = z.object({
     .trim()
     .toLowerCase()
     .email("Enter a valid email address."),
-  newsletterOptIn: z.boolean().optional().default(false),
 });
 
 export type WaitlistSubmission = z.infer<typeof waitlistSubmissionSchema>;

@@ -85,7 +85,7 @@ export default function TermsPage() {
 
             <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">5. Waitlist and Email</h2>
             <p>
-              If you submit the waitlist form, you are responsible for providing an email address you control. Optional newsletter emails require your opt-in, and marketing emails should include a way to unsubscribe where required by law. We may remove addresses from the waitlist or stop sending emails if messages bounce, are reported as spam, or the list is discontinued.
+              If you submit the waitlist form, you are responsible for providing an email address you control. Emails related to the waitlist should include a way to unsubscribe where required by law. We may remove addresses from the waitlist or stop sending emails if messages bounce, are reported as spam, or the list is discontinued.
             </p>
 
             <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">6. Limitation of Liability</h2>

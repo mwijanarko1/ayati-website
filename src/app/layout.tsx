@@ -112,8 +112,6 @@ const jsonLd = {
   ]
 };
 
-import { CookieConsent } from "@/components/CookieConsent";
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -137,7 +135,6 @@ export default function RootLayout({
           Skip to main content
         </a>
         {children}
-        <CookieConsent />
       </body>
     </html>
   );

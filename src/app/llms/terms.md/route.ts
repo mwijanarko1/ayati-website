@@ -15,7 +15,7 @@ By using Ayati you agree to lawful, respectful use. The desktop source is distri
 
 - Desktop app may use screen analysis, user-configured AI providers, Quran Foundation / Quran.com / media / prayer APIs, local storage, and updates as described in the Privacy Policy
 - Third-party services are independent; your credentials and compliance obligations are yours
-- Waitlist/newsletter emails require an address you control; optional newsletter emails require opt-in and should include unsubscribe where required by law
+- Waitlist emails require an address you control; unsubscribe is honored where required by law
 - Quranic content and AI output are educational aids only—not fatwa; verify with scholars
 - Ayati is provided "as is" to the extent permitted by law
 - Governing law: England and Wales (subject to mandatory consumer protections where you live, including UK consumer rights)

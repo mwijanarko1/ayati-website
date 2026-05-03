@@ -5,6 +5,8 @@ const envSchema = z.object({
   NEXT_PUBLIC_APP_URL: z.string().url().optional(),
   RESEND_API_KEY: z.string().min(1).optional(),
   RESEND_AUDIENCE_ID: z.string().min(1).optional(),
+  RESEND_FROM_EMAIL: z.string().min(1).optional(),
+  WAITLIST_UNSUBSCRIBE_SECRET: z.string().min(16).optional(),
 });
 
 export type Env = z.infer<typeof envSchema>;
@@ -19,6 +21,8 @@ export function getEnv(): Env {
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
     RESEND_API_KEY: process.env.RESEND_API_KEY,
     RESEND_AUDIENCE_ID: process.env.RESEND_AUDIENCE_ID,
+    RESEND_FROM_EMAIL: process.env.RESEND_FROM_EMAIL,
+    WAITLIST_UNSUBSCRIBE_SECRET: process.env.WAITLIST_UNSUBSCRIBE_SECRET,
   });
 
   if (!parsed.success) {

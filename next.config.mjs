@@ -2,6 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   async headers() {
+    // React's dev client uses eval() for debugging (e.g. RSC stack reconstruction); keep it out of production CSP.
+    const scriptSrc =
+      process.env.NODE_ENV === "development"
+        ? "script-src 'self' 'unsafe-inline' 'unsafe-eval'"
+        : "script-src 'self' 'unsafe-inline'";
+
     return [
       {
         source: "/:path*",
@@ -17,7 +23,7 @@ const nextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              "script-src 'self'",
+              scriptSrc,
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "img-src 'self' data: blob: https:",
               "font-src 'self' https://fonts.gstatic.com",

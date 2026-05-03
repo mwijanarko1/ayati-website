@@ -12,9 +12,9 @@ describe("Hero", () => {
     expect(screen.getByText(/matches verses to your workflow/i)).toBeInTheDocument();
   });
 
-  it("renders the download button", () => {
+  it("does not show the download link while the hero release flag is off", () => {
     render(<Hero />);
-    expect(screen.getByText(/Download/i)).toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: /^download$/i })).not.toBeInTheDocument();
   });
 
   it("renders privacy and terms links", () => {
