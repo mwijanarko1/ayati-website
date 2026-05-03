@@ -35,7 +35,7 @@ export function PrivacyReliability() {
                 </div>
                 <div>
                   <h3 className="text-xl font-sora font-bold text-[#2D5A43] mb-2">Local Comfort</h3>
-                  <p className="text-gray-500">Your journal, streaks, and settings stay right where they belong—on your device, tucked away safely.</p>
+                  <p className="text-gray-500">Your journal, streaks, and settings stay right where they belong: on your device, tucked away safely.</p>
                 </div>
               </div>
             </div>

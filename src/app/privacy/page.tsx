@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Sora } from "next/font/google";
 
@@ -27,9 +28,14 @@ export default function PrivacyPage() {
       <header className="relative z-10 py-8 border-b border-gray-100 dark:border-gray-900 bg-white/50 dark:bg-black/50 backdrop-blur-md">
         <div className="container mx-auto px-6 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center text-black font-bold text-lg transform group-hover:rotate-12 transition-transform">
-              A
-            </div>
+            <Image
+              src="/icon.png"
+              alt=""
+              width={32}
+              height={32}
+              className="h-8 w-8 shrink-0 rounded-lg object-cover transition-transform group-hover:rotate-12"
+              priority
+            />
             <span className="font-sora font-bold text-xl tracking-tight">Ayati</span>
           </Link>
           <Link href="/" className="text-sm font-medium text-gray-500 hover:text-emerald-500 transition-colors">
@@ -44,56 +50,70 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-gray-500 dark:text-gray-400 mb-12 font-mono text-sm">
-            Last Updated: April 20, 2026
+            Last Updated: May 3, 2026
           </p>
 
           <div className="prose dark:prose-invert prose-emerald max-w-none">
             <p className="description-text mb-8">
-              At Ayati, we are committed to protecting your privacy while helping you build a deeper connection with the Quran. This policy outlines how we handle your data when you use the Ayati desktop companion and website.
+              This policy describes how Ayati handles information when you use the <strong>Ayati Quran Desktop Companion</strong> (the desktop app) and this <strong>website</strong>. The app and the site are different products—when practices differ, we say so below. This page is a plain-language summary and is not legal advice.
             </p>
 
-            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">1. Data Reflection & Privacy</h2>
+            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">1. Who We Are</h2>
             <p>
-              Ayati is designed with a "privacy-first" philosophy. The core functionality of the desktop companion—analyzing your screen context to provide Quranic reflections—is processed locally on your machine whenever possible.
+              Ayati is published by Mikhail Wijanarko. Privacy questions and requests can be sent to <a href="mailto:mikhailspeaks@gmail.com" className="text-emerald-500 underline">mikhailspeaks@gmail.com</a>. If a separate organization distributes a modified build of Ayati, that distributor is responsible for its own privacy notice and data practices.
             </p>
-            <ul>
-              <li><strong>Local Processing:</strong> Most contextual analysis happens on your device to ensure your activity remains private.</li>
-              <li><strong>Contextual Awareness:</strong> We only process active screen content when the app is enabled and focused on providing reflections.</li>
-            </ul>
 
-            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">2. Information We Collect</h2>
+            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">2. Data Reflection & Privacy</h2>
             <p>
-              We collect minimal information necessary to provide and improve our services:
+              The desktop app is built around local-first processing: screen context and Quranic reflections are intended to stay on your computer. Settings, assistant chat history, reflection notes, optional Quran Foundation sign-in tokens, prayer and todo preferences, and similar data are stored locally in the app’s user data area—you do not need an Ayati-operated account just to run the app.
             </p>
             <ul>
-              <li><strong>Account Information:</strong> If you create an account, we store your email address and basic profile details.</li>
-              <li><strong>Usage Analytics:</strong> We may collect anonymous telemetry data to understand how the app is used and to fix bugs.</li>
-              <li><strong>Reflections:</strong> Your favored verses and spiritual progress are synced across your devices if you are logged in.</li>
+              <li><strong>Local processing:</strong> Core reflection and analysis runs on your device whenever possible.</li>
+              <li><strong>Optional permissions:</strong> Features such as screen capture or optional activity awareness only work if you enable them and grant the operating-system permissions the platform requires.</li>
             </ul>
 
-            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">3. Spiritual Integrity</h2>
+            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">3. Information We Collect</h2>
             <p>
-              Your spiritual journey is personal. We do not sell your data to third parties, nor do we use your Quranic reflections for targeted advertising. Our mission is spiritual growth, not data exploitation.
+              <strong>Desktop app.</strong> Data leaves your device mainly when <em>you</em> use features that contact third parties—for example an AI provider you configure with your own API key, optional Quran Foundation authorization and APIs, Quran.com content APIs, verse media hosts, prayer-time services when you set a location, or automatic update checks that contact GitHub release infrastructure. Those organizations handle data under their own terms and privacy policies.
+            </p>
+            <p>
+              <strong>This website.</strong> If you join our waitlist, we collect the email address you submit and your optional newsletter choice so we can send product updates and early-access information through our email provider, Resend. We also store submission metadata needed to operate the list, such as the source of the signup and submission time. We may store your cookie-banner preference in your browser (for example in local storage) so we do not prompt on every visit.
             </p>
 
-            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">4. AI and Machine Learning</h2>
+            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">4. How We Use and Share Data</h2>
             <p>
-              Ayati uses AI to transform your context into reflections. While we use advanced models, we ensure that these processes respect the sanctity of the Quran and the privacy of the user. We do not use your personal context to train large-scale public models.
+              We do not sell your personal information or use your Quranic reflections for targeted advertising. The open-source desktop companion, as documented in our engineering materials, is not designed around an Ayati-operated analytics “phone home” channel; what third parties receive depends on the features and credentials you enable.
+            </p>
+            <p>
+              For the website waitlist, we use your email to manage early-access communication, answer related requests, maintain suppression/unsubscribe records, and protect the service from abuse. We share waitlist data with Resend as our email service provider. We may also disclose information if required by law, to protect rights and security, or with your consent.
             </p>
 
-            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">5. Your Rights</h2>
+            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">5. Legal Bases, Retention, and Transfers</h2>
             <p>
-              Depending on your location, you may have the following rights regarding your personal data:
+              Where GDPR or UK GDPR applies, we rely on consent for optional newsletter emails, legitimate interests for operating a requested waitlist and protecting the service, and legal obligation where we must keep records or respond to lawful requests. We keep waitlist data until you ask us to remove it, the list is no longer needed, or retention is required for legal or security reasons. Browser storage for the cookie banner remains until you clear site data or the stored preference is replaced.
+            </p>
+            <p>
+              Resend and other third-party providers may process data in countries outside your own. Where required, those transfers should be covered by appropriate safeguards provided by the relevant provider.
+            </p>
+
+            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">6. AI and Machine Learning</h2>
+            <p>
+              When you use assistant or vision flows, prompts and images are sent to the <strong>AI endpoint you configure</strong> using <strong>your</strong> credentials. Providers may log or retain content under their own policies—do not paste secrets or highly sensitive personal data into prompts. Review important religious questions with the Quran and qualified scholars; model output can be incomplete or mistaken.
+            </p>
+
+            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">7. Your Rights</h2>
+            <p>
+              Depending on where you live, privacy laws may give you rights to access, correct, delete, restrict, object to, or receive a copy of personal data, and to withdraw consent where processing relies on consent. Much of the desktop app’s processing stays on your device—you can delete local data by clearing app data or uninstalling. For information processed by third-party services, use their dashboards (for example revoking API keys or disconnecting Quran Foundation) or contact them directly where they act as independent controllers.
             </p>
             <ul>
-              <li><strong>GDPR (Europe):</strong> You have the right to access, rectify, or erase your data, the right to restrict processing, the right to data portability, and the right to object to processing.</li>
-              <li><strong>CCPA (California):</strong> We do not sell your personal information. You have the right to know what data we collect and request its deletion.</li>
-              <li><strong>COPPA (Children):</strong> Ayati is not directed at children under the age of 13. We do not knowingly collect information from children. If you believe we have accidentally collected data from a child, please contact us immediately.</li>
+              <li><strong>GDPR / UK GDPR:</strong> You may also have the right to complain to your local supervisory authority, including the UK Information Commissioner’s Office if UK law applies.</li>
+              <li><strong>CCPA / U.S. state laws:</strong> We do not sell or share your personal information for cross-context behavioral advertising based on the desktop product and website practices described here. For information collected through this site (such as waitlist email), contact us below.</li>
+              <li><strong>Children:</strong> Ayati is not directed at children under 13, and we do not knowingly collect information from children.</li>
             </ul>
 
-            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">6. Data Protection Officer</h2>
+            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">8. Contact</h2>
             <p>
-              To exercise any of your rights or if you have questions about our privacy practices, please contact our privacy team at <a href="mailto:privacy@ayati.app" className="text-emerald-500 underline">privacy@ayati.app</a>.
+              Privacy questions: <a href="mailto:mikhailspeaks@gmail.com" className="text-emerald-500 underline">mikhailspeaks@gmail.com</a>.
             </p>
           </div>
         </div>
@@ -102,7 +122,16 @@ export default function PrivacyPage() {
       <footer className="relative z-10 py-12 border-t border-gray-100 dark:border-gray-900 bg-gray-50/50 dark:bg-black/50 backdrop-blur-sm">
         <div className="container mx-auto px-6 text-center">
           <p className="text-gray-500 dark:text-gray-400 text-sm">
-            © {new Date().getFullYear()} Ayati. Registered in Indonesia.
+            © {new Date().getFullYear()} Ayati. Built by{' '}
+            <a
+              href="https://mikhailwijanarko.xyz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-emerald-500 underline hover:text-emerald-600"
+            >
+              @mikhailbuilds
+            </a>
+            .
           </p>
         </div>
       </footer>

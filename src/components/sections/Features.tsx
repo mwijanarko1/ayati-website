@@ -1,11 +1,14 @@
 import React from 'react';
-import { 
-  Bird, 
-  Sparkle, 
-  BookOpen, 
-  BookmarkSimple, 
-  Plant, 
-  Compass 
+import {
+  Bird,
+  Sparkle,
+  BookOpen,
+  BookmarkSimple,
+  Plant,
+  Compass,
+  ListChecks,
+  Mosque,
+  Timer,
 } from "@phosphor-icons/react/dist/ssr";
 
 const features = [
@@ -44,6 +47,27 @@ const features = [
     description: "Select your preferred translations, reciters, and AI models for an experience that feels like home.",
     className: "bento-item-medium",
     icon: <Compass size={32} weight="duotone" className="text-emerald-500" />
+  },
+  {
+    title: "Warm To-Dos",
+    description:
+      "Capture tasks in a simple list beside your day so nothing important slips away while your heart stays with the Quran.",
+    className: "bento-item-medium",
+    icon: <ListChecks size={32} weight="duotone" className="text-emerald-500" />
+  },
+  {
+    title: "Prayer Reminders",
+    description:
+      "Gentle nudges for salah times based on your location, so you can pause, pray, and return to work with a clear mind.",
+    className: "",
+    icon: <Mosque size={32} weight="duotone" className="text-emerald-500" />
+  },
+  {
+    title: "Pomodoro Focus",
+    description:
+      "Short, kind focus sessions with a built-in timer help you work deeply, then breathe, reset, and reconnect with ease.",
+    className: "",
+    icon: <Timer size={32} weight="duotone" className="text-emerald-500" />
   }
 ];
 

@@ -5,25 +5,25 @@ const BASE_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://ayati.app";
 const CONTENT = `# Ayati — Terms of Service
 
 Canonical URL: ${BASE_URL}/terms
-Last Updated: April 20, 2026
+Last Updated: May 3, 2026
 
 ## Summary
 
-By using Ayati, you agree to use the service for its intended spiritual and educational purposes and to respect the sanctity of the Quranic content it provides.
+By using Ayati you agree to lawful, respectful use. The desktop source is distributed under the MIT License (see repository LICENSE; copyright Mikhail Wijanarko). Branding and site content outside that license remain protected where applicable.
 
-## Key terms
+## Key points
 
-- Accept these terms to use the desktop companion and website
-- Use the service ethically — do not generate content that contradicts Quranic teachings or promotes harm
-- Your reflections and personal insights remain yours; Ayati does not claim ownership
-- The software and brand are the property of the Ayati team under applicable intellectual property laws
-- The Quranic text itself is used in respect of its public domain and spiritual status
-- Ayati is provided "as is" — always consult original Quranic sources and scholars for definitive guidance
-- Terms may be updated; continued use constitutes acceptance
+- Desktop app may use screen analysis, user-configured AI providers, Quran Foundation / Quran.com / media / prayer APIs, local storage, and updates as described in the Privacy Policy
+- Third-party services are independent; your credentials and compliance obligations are yours
+- Waitlist/newsletter emails require an address you control; optional newsletter emails require opt-in and should include unsubscribe where required by law
+- Quranic content and AI output are educational aids only—not fatwa; verify with scholars
+- Ayati is provided "as is" to the extent permitted by law
+- Governing law: England and Wales (subject to mandatory consumer protections where you live, including UK consumer rights)
+- Terms may change; continued use may constitute acceptance where allowed by law
 
 ## Contact
 
-For legal questions: legal@ayati.app
+mikhailspeaks@gmail.com
 
 ## Related links
 

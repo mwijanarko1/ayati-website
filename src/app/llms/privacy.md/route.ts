@@ -5,31 +5,41 @@ const BASE_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://ayati.app";
 const CONTENT = `# Ayati — Privacy Policy
 
 Canonical URL: ${BASE_URL}/privacy
-Last Updated: April 20, 2026
+Last Updated: May 3, 2026
 
 ## Summary
 
-Ayati is built with a privacy-first philosophy. Context analysis runs locally on your device wherever possible. We do not sell your data or use Quranic reflections for advertising.
+The Ayati desktop companion stores settings, reflections, and credentials locally and does not require an Ayati-operated account to run. Data typically leaves your device only when you enable features that call third parties (AI providers you configure with your keys, optional Quran Foundation APIs, Quran.com, verse media hosts, prayer-time APIs, or GitHub-hosted update checks). This marketing site may collect waitlist email through Resend, store submission metadata needed to operate the waitlist, and store cookie-banner preferences in browser storage.
 
-## Data we collect
+## Controller / contact
 
-- Account email and basic profile (if you create an account)
-- Anonymous usage telemetry to fix bugs and improve the app
-- Favored verses and spiritual progress (synced across devices when logged in)
+Ayati is published by Mikhail Wijanarko. Privacy requests: mikhailspeaks@gmail.com.
+
+## Desktop app (high level)
+
+- Local-first reflection and screen-context processing on your device
+- Optional OS permissions (for example screen capture) only when you use dependent features
+- Third-party services process data under their own policies when contacted
+
+## Website
+
+- Waitlist: email address and optional newsletter preference submitted by you
+- Provider: Resend for email list/contact management
+- Browser storage may remember cookie/consent choices
+- Legal bases where GDPR / UK GDPR applies: consent for optional newsletter emails, legitimate interests for requested waitlist operation and service protection, and legal obligation where required
+- Retention: waitlist data until removal is requested, the list is no longer needed, or legal/security retention requires otherwise; browser storage remains until cleared or replaced
 
 ## What we do not do
 
-- We do not use personal screen context to train public AI models
-- We do not sell your data to third parties
-- We do not use your Quranic reflections for targeted advertising
+- We do not sell your personal information or use Quranic reflections for targeted advertising
 
 ## Your rights
 
-You can access, export, or delete your data at any time through the app settings.
+Many desktop controls are local (clear app data or uninstall). Third-party dashboards apply for keys and connected accounts. Depending on location, privacy rights may include access, correction, deletion, restriction, objection, portability, withdrawal of consent, and complaint to a supervisory authority. Contact us for questions about information collected through this website.
 
 ## Contact
 
-For privacy questions: privacy@ayati.app
+mikhailspeaks@gmail.com
 
 ## Related links
 

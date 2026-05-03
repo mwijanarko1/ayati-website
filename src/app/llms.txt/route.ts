@@ -8,7 +8,7 @@ const LLMS_TXT = `# Ayati
 
 ## About
 
-Ayati connects you to the Quran throughout your day — powered by the Quran Foundation ecosystem.
+Ayati connects you to the Quran throughout your day, powered by the Quran Foundation ecosystem.
 
 ## Machine-readable companion pages
 

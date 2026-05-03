@@ -34,7 +34,7 @@ export function CookieConsent() {
               Spiritual Privacy & Cookies
             </h3>
             <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-              We use essential cookies to keep Ayati secure and optional analytics to improve your experience. Your spiritual data remains private and local. Learn more in our{' '}
+              We use essential browser storage for this banner and collect information you submit on this site (for example the waitlist form) as described in our Privacy Policy. Spiritual reflection data from the desktop app stays local unless you enable third-party features there. Learn more in our{' '}
               <Link href="/privacy" className="text-emerald-500 hover:underline">
                 Privacy Policy
               </Link>.

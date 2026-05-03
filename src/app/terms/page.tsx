@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Sora } from "next/font/google";
 
@@ -27,9 +28,14 @@ export default function TermsPage() {
       <header className="relative z-10 py-8 border-b border-gray-100 dark:border-gray-900 bg-white/50 dark:bg-black/50 backdrop-blur-md">
         <div className="container mx-auto px-6 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center text-black font-bold text-lg transform group-hover:rotate-12 transition-transform">
-              A
-            </div>
+            <Image
+              src="/icon.png"
+              alt=""
+              width={32}
+              height={32}
+              className="h-8 w-8 shrink-0 rounded-lg object-cover transition-transform group-hover:rotate-12"
+              priority
+            />
             <span className="font-sora font-bold text-xl tracking-tight">Ayati</span>
           </Link>
           <Link href="/" className="text-sm font-medium text-gray-500 hover:text-emerald-500 transition-colors">
@@ -44,56 +50,62 @@ export default function TermsPage() {
             Terms of Service
           </h1>
           <p className="text-gray-500 dark:text-gray-400 mb-12 font-mono text-sm">
-            Last Updated: April 20, 2026
+            Last Updated: May 3, 2026
           </p>
 
           <div className="prose dark:prose-invert prose-emerald max-w-none">
             <p className="description-text mb-8">
-              Welcome to Ayati. By using our desktop companion or website, you agree to these terms. Please read them carefully.
+              These Terms apply when you use the Ayati Quran Desktop Companion, related materials we publish, and this website. They complement the open-source <strong>MIT License</strong> file shipped with the repository. If you do not agree, do not use the software or site.
             </p>
 
             <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">1. Acceptance of Terms</h2>
             <p>
-              By accessing or using Ayati, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree, please do not use our services.
+              By downloading, installing, accessing, submitting information to, or using the desktop app or website, you agree to these Terms. If you use Ayati on behalf of an organization, you represent that you have authority to bind that organization. If a separate distributor publishes a modified build, that distributor may provide additional or different terms for its own build.
             </p>
 
             <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">2. Use of Service</h2>
             <p>
-              Ayati provides an AI-powered Quranic reflection tool. You agree to use the service only for its intended spiritual and educational purposes.
+              Ayati is a desktop companion that may capture or analyze screen content when you invoke those features and grant OS permissions; send text or images to AI providers <strong>you</strong> configure; connect to Quran Foundation, Quran.com, verse media hosts, prayer-time APIs, and update servers as summarized in our Privacy Policy; and store settings and history locally on your device. Features may change between releases.
             </p>
             <ul>
-              <li><strong>Local Environment:</strong> You are responsible for ensuring your system meets the requirements for the desktop companion.</li>
-              <li><strong>Ethical Use:</strong> You agree not to use Ayati to generate or distribute content that contradicts the teachings of the Quran or promotes harm.</li>
+              <li><strong>Spiritual and educational use:</strong> Use Ayati only for lawful, respectful purposes aligned with its intent.</li>
+              <li><strong>Ethical use:</strong> Do not use Ayati to violate applicable law, harass others, infringe intellectual property, overload third-party services, or generate content that contradicts Quranic teachings or promotes harm.</li>
+              <li><strong>Your responsibility:</strong> You are responsible for laws that apply to you (including workplace monitoring rules), for safeguarding API keys and OAuth tokens, and for ensuring you have the right to capture or analyze on-screen content in your environment.</li>
             </ul>
 
             <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">3. Intellectual Property</h2>
             <p>
-              The Ayati software, brand, and website content (excluding the text of the Quran itself) are the property of the Ayati team and are protected by intellectual property laws. The Quranic text is used with respect to its public domain and spiritual status.
+              The Ayati desktop application source code is distributed under the <strong>MIT License</strong> published in the project repository (copyright Mikhail Wijanarko). Ayati branding, marketing copy on this website, and assets not covered by that license remain subject to applicable intellectual property laws. Quranic text and third-party fonts, recitations, or API content remain property of their respective owners.
             </p>
 
             <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">4. User Content & Reflections</h2>
             <p>
-              Any reflections or notes you create within Ayati are yours. We do not claim ownership over your personal spiritual insights.
+              Reflections and notes you create are yours. When you use features that send content to third-party services, you instruct Ayati to transmit that content under your responsibility and the third party’s terms.
             </p>
 
-            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">5. Limitation of Liability</h2>
+            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">5. Waitlist and Email</h2>
             <p>
-              Ayati is provided "as is" without warranties of any kind. While we strive for accuracy in AI-generated reflections, you should always consult original Quranic sources and scholars for definitive guidance.
+              If you submit the waitlist form, you are responsible for providing an email address you control. Optional newsletter emails require your opt-in, and marketing emails should include a way to unsubscribe where required by law. We may remove addresses from the waitlist or stop sending emails if messages bounce, are reported as spam, or the list is discontinued.
             </p>
 
-            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">6. Modifications</h2>
+            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">6. Limitation of Liability</h2>
             <p>
-              We may update these terms from time to time. Your continued use of the service after such changes constitutes acceptance of the new terms.
+              Ayati is provided <strong>“as is”</strong> without warranties of any kind to the maximum extent permitted by law. Quranic material, translations, tafsir, and AI-generated output are <strong>educational and devotional aids only</strong>; they may contain errors, omissions, or model mistakes and are <strong>not</strong> fatwa or a substitute for qualified scholars. Third-party services may change availability or policies without notice. Some jurisdictions limit liability exclusions; where so, those provisions apply only to the extent allowed.
             </p>
 
-            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">7. Governing Law</h2>
+            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">7. Modifications</h2>
             <p>
-              These terms are governed by the laws of the Republic of Indonesia. Any disputes arising from these terms shall be subject to the exclusive jurisdiction of the courts of Indonesia.
+              We may update these Terms (for example when practices change). Continued use after the effective date constitutes acceptance unless applicable law requires a different process. The app may install updates automatically or when you choose to update, depending on platform behavior.
             </p>
 
-            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">8. Contact</h2>
+            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">8. Governing Law</h2>
             <p>
-              For any questions regarding these terms, contact us at <a href="mailto:legal@ayati.app" className="text-emerald-500 underline">legal@ayati.app</a>.
+              These Terms are governed by the laws of <strong>England and Wales</strong>, without regard to conflict-of-law principles that would apply another country’s laws. If you are a consumer, mandatory protections—including non-waivable rights under UK law—still apply where the law requires. Subject to that, disputes shall be resolved in the courts of England and Wales.
+            </p>
+
+            <h2 className="text-2xl font-sora font-bold mt-12 mb-6 text-emerald-500">9. Contact</h2>
+            <p>
+              Questions about these Terms: <a href="mailto:mikhailspeaks@gmail.com" className="text-emerald-500 underline">mikhailspeaks@gmail.com</a>.
             </p>
           </div>
         </div>
@@ -102,7 +114,16 @@ export default function TermsPage() {
       <footer className="relative z-10 py-12 border-t border-gray-100 dark:border-gray-900 bg-gray-50/50 dark:bg-black/50 backdrop-blur-sm">
         <div className="container mx-auto px-6 text-center">
           <p className="text-gray-500 dark:text-gray-400 text-sm">
-            © {new Date().getFullYear()} Ayati. Registered in Indonesia.
+            © {new Date().getFullYear()} Ayati. Built by{' '}
+            <a
+              href="https://mikhailwijanarko.xyz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-emerald-500 underline hover:text-emerald-600"
+            >
+              @mikhailbuilds
+            </a>
+            .
           </p>
         </div>
       </footer>

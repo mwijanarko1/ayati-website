@@ -1,89 +1,73 @@
 import Image from "next/image";
-import { Bird } from "@phosphor-icons/react/dist/ssr";
+import Link from "next/link";
+import { HeroWaitlistDialog } from "@/components/HeroWaitlistDialog";
 
 /**
  * Calm & Cute Hero component for Ayati
  */
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-32 pb-24 overflow-hidden bg-cream">
-      {/* Gentle Floating Blobs */}
-      <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-mint/30 rounded-full blur-[100px] animate-blob pointer-events-none" />
-      <div className="absolute bottom-10 right-1/4 w-[500px] h-[500px] bg-emerald/10 rounded-full blur-[120px] animate-blob animation-delay-2000 pointer-events-none" />
+    <section className="relative flex min-h-dvh flex-col justify-center overflow-hidden bg-cream pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-[max(1rem,env(safe-area-inset-top))] sm:pt-6 lg:min-h-screen lg:items-center lg:justify-center lg:pt-32 lg:pb-24">
+      {/* Gentle floating blobs — scaled down on small screens */}
+      <div className="pointer-events-none absolute left-[12%] top-0 h-[min(220px,55vw)] w-[min(220px,55vw)] rounded-full bg-mint/30 blur-[72px] animate-blob sm:left-1/4 sm:h-[320px] sm:w-[320px] sm:blur-[90px] md:h-[400px] md:w-[400px] md:blur-[100px]" />
+      <div className="pointer-events-none absolute bottom-0 right-[8%] h-[min(260px,65vw)] w-[min(260px,65vw)] rounded-full bg-emerald/10 blur-[88px] animate-blob animation-delay-2000 sm:bottom-10 sm:right-1/4 sm:h-[400px] sm:w-[400px] sm:blur-[110px] md:h-[500px] md:w-[500px] md:blur-[120px]" />
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="flex flex-col items-start text-left max-w-xl">
-            {/* Friendly Greeting */}
-            <div className="mb-6 animate-fade-in">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald/10 border border-emerald/20 text-[#2D5A43] text-sm font-bold">
-                <span className="badge-pill !py-0.5 !px-2 !text-[9px] !bg-emerald-500 !text-white">HACKATHON</span>
-                <Bird size={16} weight="bold" className="text-emerald-600" />
-                <span>An Official Quran Foundation Submission</span>
-              </div>
-            </div>
-
-            {/* Main Headline */}
-            <h1 className="text-[80px] md:text-[100px] font-sora font-black tracking-[-0.04em] text-[#2D5A43] mb-2 leading-none animate-fade-in-up">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6">
+        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+          <div className="mx-auto flex w-full max-w-xl flex-col items-center text-center lg:mx-0 lg:items-start lg:text-left">
+            <h1 className="mb-1 animate-fade-in-up font-sora text-[clamp(2.625rem,9.5vw+0.35rem,6.25rem)] font-black leading-[0.95] tracking-[-0.04em] text-[#2D5A43] sm:text-[clamp(3rem,8vw+0.5rem,6.25rem)] lg:mb-2 lg:text-[100px]">
               Ayati<span className="text-emerald-500">.</span>
             </h1>
 
-            {/* Subheader */}
-            <h2 className="text-2xl md:text-3xl font-sora font-bold text-emerald-600 mb-8 tracking-tight animate-fade-in-up delay-100 italic">
+            <h2 className="animate-fade-in-up delay-100 max-w-[20ch] font-sora text-lg font-bold italic leading-snug tracking-tight text-emerald-600 text-balance sm:max-w-[24ch] sm:text-xl md:max-w-none md:text-2xl lg:mb-8 lg:text-3xl">
               Your Desktop Companion Who Knows Quran
             </h2>
 
-            {/* Tagline */}
-            <p className="text-lg md:text-xl font-medium text-gray-500 mb-10 max-w-lg leading-relaxed animate-fade-in-up delay-200">
-              Ayati intelligently matches Quranic verses to your workflow, keeping you connected to the Quran as you work.
+            <p className="animate-fade-in-up delay-200 mb-8 mt-4 max-w-md text-pretty text-base font-medium leading-relaxed text-gray-500 sm:mt-5 sm:max-w-lg sm:text-lg lg:mb-10 lg:mt-0 lg:text-xl">
+              Ayati matches verses to your workflow, with a simple to-do list, prayer-time reminders, and a Pomodoro timer, so
+              focus, salah, and the Quran stay close to your day.
             </p>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 items-center w-full sm:w-auto">
+            <div className="animate-fade-in-up delay-300 flex w-full max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row sm:items-center sm:justify-center sm:gap-4 lg:justify-start">
               <a
                 href="https://github.com/mwijanarko1/ayati-quran-desktop-companion/releases/tag/ayati-mac"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-10 py-5 bg-emerald-500 hover:bg-emerald-400 text-white font-black rounded-cute transition-all duration-500 shadow-xl shadow-emerald-500/20 transform hover:-translate-y-2 w-full sm:w-auto text-center text-lg"
+                className="rounded-cute bg-emerald-500 px-7 py-4 text-center text-base font-black text-white shadow-xl shadow-emerald-500/20 transition-all duration-500 hover:bg-emerald-400 hover:-translate-y-0.5 active:translate-y-0 sm:px-10 sm:py-5 sm:text-lg lg:transform lg:hover:-translate-y-2"
               >
                 Download
               </a>
-              <a
-                href="https://github.com/mwijanarko1/ayati-quran-desktop-companion"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-10 py-5 bg-white border-2 border-mint text-[#2D5A43] font-bold rounded-cute transition-all duration-500 transform hover:-translate-y-2 w-full sm:w-auto text-center text-lg"
-              >
-                Join Our Nest
-              </a>
+              <HeroWaitlistDialog />
             </div>
+
+            <nav
+              className="animate-fade-in-up delay-400 mt-4 flex flex-wrap items-center justify-center gap-x-1 gap-y-1 text-sm text-gray-500 lg:justify-start"
+              aria-label="Legal"
+            >
+              <Link href="/privacy" className="text-emerald-600 underline-offset-2 hover:text-emerald-500 hover:underline">
+                Privacy Policy
+              </Link>
+              <span className="mx-2 text-gray-300" aria-hidden>
+                ·
+              </span>
+              <Link href="/terms" className="text-emerald-600 underline-offset-2 hover:text-emerald-500 hover:underline">
+                Terms of Service
+              </Link>
+            </nav>
           </div>
 
-          {/* Cute Mascot Showcase */}
-          <div className="relative group perspective-1000">
-            <div className="absolute inset-0 bg-mint rounded-full blur-3xl opacity-30 animate-pulse" />
-            <div className="relative animate-float p-4">
+          <div className="relative mx-auto w-full max-w-[min(17.5rem,78vw)] perspective-1000 sm:max-w-xs md:max-w-sm lg:mx-0 lg:max-w-none">
+            <div className="absolute inset-0 rounded-full bg-mint opacity-30 blur-3xl animate-pulse" />
+            <div className="relative p-2 sm:p-4 lg:animate-float">
               <Image
                 src="/icon.png"
                 alt="Ayati Mascot - A friendly little creature reading the Quran"
                 width={700}
                 height={700}
-                className="drop-shadow-2xl"
+                sizes="(max-width: 1024px) 78vw, 45vw"
+                className="h-auto w-full drop-shadow-2xl"
                 priority
               />
-            </div>
-
-            {/* Friendly Floating Tips */}
-            <div className="absolute -top-6 -right-6 glass-panel p-6 shadow-xl hidden md:block">
-              <div className="text-emerald-600 text-[10px] font-black uppercase tracking-widest mb-1">Gentle Note</div>
-              <div className="text-gray-600 font-sora font-bold text-sm">"Verily, with hardship comes ease."</div>
-            </div>
-
-            <div className="absolute -bottom-4 -left-6 glass-panel p-4 shadow-xl hidden md:block">
-              <div className="flex items-center gap-3">
-                <div className="w-3 h-3 bg-emerald-400 rounded-full" />
-                <span className="text-gray-500 text-xs font-bold font-mono">Your heart is safe here.</span>
-              </div>
             </div>
           </div>
         </div>

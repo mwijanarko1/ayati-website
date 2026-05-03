@@ -1,5 +1,4 @@
-import React from 'react';
-import { Heart } from "@phosphor-icons/react/dist/ssr";
+import { HeroWaitlistDialog } from "@/components/HeroWaitlistDialog";
 
 export function FinalCTA() {
   return (
@@ -27,14 +26,7 @@ export function FinalCTA() {
           >
             Download Ayati
           </a>
-          <a
-            href="https://github.com/mwijanarko1/ayati-quran-desktop-companion"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-12 py-5 bg-white border-2 border-mint text-[#2D5A43] font-bold rounded-cute transition-all duration-500 transform hover:-translate-y-2 w-full sm:w-auto text-lg"
-          >
-            View GitHub
-          </a>
+          <HeroWaitlistDialog triggerClassName="w-full bg-white px-12 py-5 text-lg sm:w-auto" />
         </div>
 
         <div className="mt-32 pt-16 border-t border-emerald/10">
@@ -44,4 +36,3 @@ export function FinalCTA() {
     </section>
   );
 }
-

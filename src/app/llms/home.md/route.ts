@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 const BASE_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://ayati.app";
 
-const CONTENT = `# Ayati — Home
+const CONTENT = `# Ayati: Home
 
 Canonical URL: ${BASE_URL}/
 
