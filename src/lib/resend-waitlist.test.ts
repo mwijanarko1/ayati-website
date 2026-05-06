@@ -86,6 +86,26 @@ describe("addWaitlistContactToResend", () => {
     ).rejects.toBeInstanceOf(ResendWaitlistConfigError);
   });
 
+  it("throws ResendWaitlistConfigError when RESEND_AUDIENCE_ID is not a UUID", async () => {
+    process.env.RESEND_AUDIENCE_ID = "waitlist-segment";
+
+    await expect(
+      addWaitlistContactToResend({ email: "a@b.co" }),
+    ).rejects.toBeInstanceOf(ResendWaitlistConfigError);
+  });
+
+  it("strips surrounding quotes from RESEND_AUDIENCE_ID", async () => {
+    process.env.RESEND_AUDIENCE_ID = '"78261eea-8f8b-4381-83c6-79fa7120f1cf"';
+    const fetchMock = vi.fn().mockResolvedValue(new Response(null, { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+
+    await addWaitlistContactToResend({ email: "a@b.co" });
+
+    const init = fetchMock.mock.calls[0][1] as RequestInit;
+    const parsed = JSON.parse(init.body as string);
+    expect(parsed.segments).toEqual([{ id: "78261eea-8f8b-4381-83c6-79fa7120f1cf" }]);
+  });
+
   it("treats 409 duplicate as success", async () => {
     const fetchMock = vi.fn().mockResolvedValue(new Response(null, { status: 409 }));
     vi.stubGlobal("fetch", fetchMock);

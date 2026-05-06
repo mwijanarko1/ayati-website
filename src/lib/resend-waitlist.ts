@@ -1,5 +1,12 @@
+import { z } from "zod";
+
 import type { WaitlistSubmission } from "@/lib/waitlist";
 import { buildWaitlistConfirmationEmailHtml } from "@/lib/waitlist-transactional-brand";
+
+/** Resend segment IDs are UUIDs (Dashboard → Segments). */
+function isResendSegmentUuid(value: string): boolean {
+  return z.string().uuid().safeParse(value).success;
+}
 
 /** Resend’s documented test “from” when you have no verified domain (see Resend testing docs). */
 export const RESEND_DEFAULT_TEST_FROM = "Ayati <onboarding@resend.dev>";
@@ -50,10 +57,21 @@ export function isResendTestModeRecipientRestriction(error: ResendEmailIntegrati
  */
 export async function addWaitlistContactToResend(submission: WaitlistSubmission): Promise<void> {
   const apiKey = process.env.RESEND_API_KEY?.trim();
-  const audienceId = process.env.RESEND_AUDIENCE_ID?.trim();
+  const rawAudienceId = process.env.RESEND_AUDIENCE_ID?.trim();
+  /** Strip accidental quotes from dashboard copy-paste (Vercel/env files). */
+  const audienceId = rawAudienceId?.replace(/^["']|["']$/g, "").trim();
 
   if (!apiKey || !audienceId) {
     throw new ResendWaitlistConfigError();
+  }
+
+  if (!isResendSegmentUuid(audienceId)) {
+    console.error(
+      "RESEND_AUDIENCE_ID must be a segment UUID from Resend (Dashboard → Segments). Received value is not a valid UUID.",
+    );
+    throw new ResendWaitlistConfigError(
+      "RESEND_AUDIENCE_ID must be a valid segment UUID from Resend.",
+    );
   }
 
   const response = await fetch("https://api.resend.com/contacts", {
